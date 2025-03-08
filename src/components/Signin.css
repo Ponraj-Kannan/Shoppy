@@ -122,6 +122,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .signin-container {
+        height: 85vh;
+    }
     .signin-background-image {
         display: none;
     }
