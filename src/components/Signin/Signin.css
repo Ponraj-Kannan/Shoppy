@@ -1,0 +1,88 @@
+.signin-container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightcoral;
+}
+
+.signin-container > img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.signin-info {
+    width: 40%;
+    height: 100%;
+
+    border: 1px solid seagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffffd9;
+}
+
+.signin-top {
+    width: 80%;
+    height: 100px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid cornflowerblue;
+}
+
+.signin-top > button {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid #121212;
+    background-color: #12121200;
+}
+
+.signin-bottom {
+    width: 80%;
+    height: 350px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px solid cornflowerblue;
+
+}
+
+.signin-bottom > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signin-bottom > input {
+    width: 98%;    
+    height: 20px;
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 3px;
+    border: 1px solid #121212;
+}
+
+@media only screen and (max-width: 600px) {
+    .signin-container > img {
+        display: none;
+    }
+    .signin-info {
+        width: 80%;
+    }
+}
