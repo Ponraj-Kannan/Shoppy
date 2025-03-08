@@ -6,10 +6,9 @@ import Signin from './components/Signin'
 import Signup from './components/Signup'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Signin />} />
