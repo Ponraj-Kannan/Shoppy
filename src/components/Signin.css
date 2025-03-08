@@ -123,7 +123,7 @@
 
 @media only screen and (max-width: 600px) {
     .signin-container {
-        height: 88vh;
+        height: 87vh;
     }
     .signin-background-image {
         display: none;
