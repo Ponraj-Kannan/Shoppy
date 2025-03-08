@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './components/navbar/Navbar'
-import Signin from './components/Signin/Signin'
+import Navbar from './components/Navbar'
+import Signin from './components/Signin'
 
 function App() {
   // const [count, setCount] = useState(0)
