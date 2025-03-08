@@ -45,6 +45,22 @@
     background-color: #12121200;
 }
 
+.separator-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-contenT: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    color: #121212ce;
+}
+
+.horizontal-line {
+    width: 45%;
+    color: white;
+    border: .2px solid #121212c7; /* Adjust the colour */
+}
+
 .google-icon {
     margin-right: 8px;
     width:20px;
@@ -116,9 +132,15 @@
     background-color: #121212e4;
 }
 
-.forgot-password-link, .signup-link {
+.signup-link {
     color:#121212;
     font-size: .8rem;
+}
+
+.forgot-password-link{
+    color:#121212;
+    font-size: .8rem;
+    float: right;
 }
 
 @media only screen and (max-width: 600px) {
@@ -132,4 +154,11 @@
         width: 90%;
         height: 70vh;
     }
+}
+
+/* Sign up */
+
+.font1 {
+    color:#121212;
+    font-size: .7rem;
 }

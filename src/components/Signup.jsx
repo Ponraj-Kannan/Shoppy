@@ -1,12 +1,12 @@
 import './Signin.css';
 import React, { useState } from "react";
 import axios from 'axios';
-import backgroundImage from './assets/bert-b-rhNff6hB41s-unsplash 1.png';
+import backgroundImage from './assets/Image.png';
 import googleIcon from './assets/icons8-google-48.png';
 import hideIcon from './assets/icons8-hide-48.png';
 import divider from './assets/divider.png';
 
-const SignIn = () => {
+const SignUp = () => {
     const [user, setUser] = useState({
         userId: 0, // This would typically be auto-generated on the backend
         userName: "",
@@ -47,7 +47,7 @@ const SignIn = () => {
             <img src={backgroundImage} alt="Background" className="signin-background-image" />
             <div className="signin-form-container">
                 <div className="signin-header">
-                    <h3 style={{fontSize:'1.4rem'}}>Sign in</h3>
+                    <h3 style={{fontSize:'1.4rem'}}>Sign Up</h3>
                     <button className="google-signin-button">
                         <img src={googleIcon} alt="Google Icon" className="google-icon" />
                         Continue with Google
@@ -88,12 +88,13 @@ const SignIn = () => {
                             onChange={handleInputChange}
                             required
                         />
+                        <span className='font1'>Use 8 or more characters with a mix of letters</span><br/>
                         <a href="#" className="forgot-password-link" >Forgot your password?</a>
                     </div>
 
-                    <button className="signin-button">Sign In</button>
+                    <button className="signin-button">Sign Up</button>
                     <p className="signup-prompt">
-                        Don’t have an account? <a href="/signup" className="signup-link">Sign up</a>
+                        Already have an  account? <a href="/signin" className="signup-link">Log in</a>
                     </p>
                 </form>
             </div>
@@ -101,4 +102,4 @@ const SignIn = () => {
     );
 };
 
-export default SignIn;
+export default SignUp;
