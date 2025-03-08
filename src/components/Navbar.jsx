@@ -1,6 +1,18 @@
-import './Navbar.css'
+import { useNavigate } from "react-router-dom";
+import './Navbar.css';
 
-const Navbar = () =>{
+const Navbar = () => {
+    // Using useNavigate to get the navigate function
+    const navigate = useNavigate();
+
+    // Navigation functions
+    const navToSignUp = () => {
+        navigate('/signup');
+    };
+    const navToSignIn = () => {
+        navigate('/signin');
+    };
+
     return (
         <div className="navbar">
             <div className="nav-brand">
@@ -8,17 +20,17 @@ const Navbar = () =>{
             </div>
             <div className="nav-left">
                 <p>
-                    English (united States)
+                    English (United States)
                 </p>
-                <button className='btn-login'>
+                <button className="btn-login" onClick={navToSignIn}>
                     Login
                 </button>
-                <button className='btn-signUp'>
+                <button className="btn-signUp" onClick={navToSignUp}>
                     SignUp
                 </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
