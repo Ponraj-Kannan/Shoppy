@@ -2,9 +2,6 @@ import './Signin.css';
 import React, { useState } from "react";
 import axios from 'axios';
 import backgroundImage from './assets/Image.png';
-import googleIcon from './assets/icons8-google-48.png';
-import hideIcon from './assets/icons8-hide-48.png';
-import divider from './assets/divider.png';
 
 const PasswordReset = () => {
     const [user, setUser] = useState({
@@ -31,7 +28,7 @@ const PasswordReset = () => {
         
         // Send the user object to the Spring Boot backend using axios
         axios
-        .post("http://localhost:8080/api/user", user) // Replace with your Spring Boot endpoint
+        .post("http://localhost:8080/api/userpresent", user) // Replace with your Spring Boot endpoint
         .then((response) => {
         console.log("User data submitted successfully:", response.data);
         })

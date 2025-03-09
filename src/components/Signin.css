@@ -67,8 +67,7 @@
 }
 
 .hide-icon {
-    margin-right: 8px;
-    width:15px;
+    width:17px;
 }
 
 .divider-icon {
@@ -124,10 +123,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.toggle-password-visibility-button:hover {
-    background-color: #1212122d;
 }
 
 .input-field {

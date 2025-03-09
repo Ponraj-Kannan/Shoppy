@@ -1,10 +1,11 @@
 import './Signin.css';
 import React, { useState } from "react";
+import { useRef } from "react";
 import axios from 'axios';
 import backgroundImage from './assets/bert-b-rhNff6hB41s-unsplash 1.png';
 import googleIcon from './assets/icons8-google-48.png';
 import hideIcon from './assets/icons8-hide-48.png';
-import divider from './assets/divider.png';
+import showIcon from './assets/icons8-unhide-48.png';
 
 const SignIn = () => {
     const [user, setUser] = useState({
@@ -42,6 +43,20 @@ const SignIn = () => {
         console.log(user);
     };
 
+    const [icon, setIcon] = useState(hideIcon);
+
+    const [pass, setPass] = useState("password"); // Reference to password input
+
+    const unhide = () => {
+        setIcon(showIcon); // Change icon on hover
+        setPass("text")
+    };
+
+    const hide = () => {
+        setIcon(hideIcon); // Change back on mouse leave
+        setPass("password")
+    };
+
     return (
         <div className="signin-container">
             <img src={backgroundImage} alt="Background" className="signin-background-image" />
@@ -76,12 +91,19 @@ const SignIn = () => {
                         <div className="password-section">
                             <label htmlFor="password" className="input-label">Password</label>
                             <button className="toggle-password-visibility-button">
-                                <img src={hideIcon} alt="Hide Icon" className="hide-icon"/>UnHide</button>
+                                <img 
+                                    src={icon} 
+                                    alt="Toggle Icon" 
+                                    className="hide-icon" 
+                                    onMouseEnter={unhide} 
+                                    onMouseLeave={hide} 
+                                />
+                            </button>
                         </div>
 
                         <input 
                             id="password" 
-                            type="password" 
+                            type={pass}
                             className="input-field" 
                             name="userPassword"
                             value={user.userPassword}
