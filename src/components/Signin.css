@@ -1,4 +1,4 @@
-.signin-container {
+.signin-container, .password-reset-container {
     width: 100%;
     height: 91vh;
     display: flex;
@@ -8,12 +8,12 @@
     background-color: #F2E9E4;
 }
 
-.signin-background-image {
+.signin-background-image, .password-reset-background-image {
     height: 100%;
     object-fit: cover;
 }
 
-.signin-form-container {
+.signin-form-container, .password-reset-form-container {
     width: 40%;
     height: 100%;
     display: flex;
@@ -71,7 +71,7 @@
     width:15px;
 }
 
-.divider-icon{
+.divider-icon {
     width: 80%;
 }
 
@@ -82,7 +82,29 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    /* border: 1px solid cornflowerblue; */
+}
+
+.password-reset-header, .password-reset-form {
+    width: 80%;
+    height: 180px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.password-reset-header {
+    height: 100px;
+}
+
+.password-reset-title {
+    font-size: 1.4rem;
+}
+
+.password-reset-instruction {
+    font-size: 0.8rem;
+    color: #676B80;
+    margin-top: -10px;
 }
 
 .password-section {
@@ -117,7 +139,7 @@
     border: 1px solid #121212;
 }
 
-.signin-button {
+.signin-button, .password-reset-button {
     border: 1px solid #121212;
     padding: 8px 20px;
     margin-left: 5px;
@@ -128,32 +150,34 @@
     
 }
 
-.signin-button:hover {
+.signin-button:hover, .password-reset-button {
     background-color: #121212e4;
 }
 
-.signup-link {
+.signup-link, .signin-prompt {
     color:#121212;
     font-size: .8rem;
 }
 
-.forgot-password-link{
+.forgot-password-link {
     color:#121212;
     font-size: .8rem;
     float: right;
 }
 
 @media only screen and (max-width: 600px) {
-    .signin-container {
+    .signin-container, .password-reset-container {
         height: 87vh;
     }
-    .signin-background-image {
+    .signin-background-image, .password-reset-background-image {
         display: none;
     }
-    .signin-form-container {
+    .signin-form-container, .password-reset-form-container {
         width: 90%;
         height: 70vh;
     }
+
+    
 }
 
 /* Sign up */
@@ -162,3 +186,4 @@
     color:#121212;
     font-size: .7rem;
 }
+

@@ -89,7 +89,6 @@ const SignUp = () => {
                             required
                         />
                         <span className='font1'>Use 8 or more characters with a mix of letters</span><br/>
-                        <a href="#" className="forgot-password-link" >Forgot your password?</a>
                     </div>
 
                     <button className="signin-button">Sign Up</button>

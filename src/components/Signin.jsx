@@ -88,7 +88,7 @@ const SignIn = () => {
                             onChange={handleInputChange}
                             required
                         />
-                        <a href="#" className="forgot-password-link" >Forgot your password?</a>
+                        <a href="/passwordreset" className="forgot-password-link" >Forgot your password?</a>
                     </div>
 
                     <button className="signin-button">Sign In</button>
